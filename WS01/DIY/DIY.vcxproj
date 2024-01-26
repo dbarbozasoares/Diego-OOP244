@@ -127,8 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\lab\graph.cpp" />
+    <ClCompile Include="..\lab\io.cpp" />
     <ClCompile Include="file.cpp" />
     <ClCompile Include="file_tester.cpp" />
+    <ClCompile Include="StMark.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="correct_output.txt" />
@@ -140,7 +143,9 @@
     <None Include="group2.csv" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\lab\io.h" />
     <ClInclude Include="file.h" />
+    <ClInclude Include="graph.h" />
     <ClInclude Include="StMark.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

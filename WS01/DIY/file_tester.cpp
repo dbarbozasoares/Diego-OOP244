@@ -12,6 +12,9 @@ Name            Date            Reason
 #include <iostream>
 #include "file.h"
 #include "StMark.h"
+#include "io.h"
+#include "graph.h"
+
 using namespace std;
 using namespace seneca;
 int main() {
@@ -22,6 +25,9 @@ int main() {
    }
    if (openFile("group1.csv")) {
       recoredsRead = readMarks(m);
+      printReport("group1.csv");
+      printReport("group2.csv");
+      printReport("group3.csv");
       cout << "GROUP1: ....................." << endl;
       for (int i = 0; i < recoredsRead; i++) {
          cout << (i + 1) << ": " << m[i].name << " " << m[i].surname << " [" << m[i].mark << "]" << endl;

@@ -23,15 +23,15 @@ namespace seneca {
    };
    bool printReport(const char* filename);
    // bubble sorting by marks in descending order
-   void sortArray(struct StMark* studentsArr);
+   void sortArray(struct StMark* studentsArr, int size);
    // Display all student data in descending order
    void displayStdData(struct StMark* stdArray, int);
    // Fill up students array
    void fillStdArray(struct StMark* stdArray, int size);
    // stores range number 0-10: array[10] and so on...
    void marksRange(struct StMark* studentsArr, int* numByRange, int totalStudents);
-   // Prints a graph comparing the sample values visually 
-   void printGraph(int samples[], int noOfSamples, const char* label);
+
+   
 
 }
 #endif // !SENECA_STMARK_H
