@@ -128,9 +128,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Assessment.h" />
+    <ClInclude Include="file.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Assessment.cpp" />
+    <ClCompile Include="file.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>

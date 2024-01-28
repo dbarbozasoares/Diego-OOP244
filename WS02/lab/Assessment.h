@@ -2,6 +2,7 @@
 #define ASSESMENT_H
 #include <stdio.h>
 #include <string.h>
+#include "file.h"
 namespace seneca {
 	const int maxCharName = 60;
 	struct Assessment {
