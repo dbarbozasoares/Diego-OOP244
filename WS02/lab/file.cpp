@@ -2,10 +2,10 @@
 #include "file.h"
 namespace seneca {
     FILE* datafile = nullptr;
-    bool openFile(const char* fname)
+    bool openFile(FILE* fname)
     {
         if (datafile != nullptr) closeFile();
-        datafile = fopen(fname, "r");
+        datafile = fname;
         return datafile != nullptr;
     }
 

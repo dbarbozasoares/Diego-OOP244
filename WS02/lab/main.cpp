@@ -7,6 +7,11 @@
 // Author	Fardad Soleimanloo
 // Description
 //
+// Student's name: Diego B Soares
+// ID number: 145820239
+// 01/27/2024
+// I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+// 
 // Revision History
 // -----------------------------------------------------------
 // Name            Date            Reason
@@ -19,6 +24,8 @@
 #include <cstdio>
 #include <cstring>
 #include "Assessment.h"
+
+
 using namespace seneca;
 using namespace std;
 void display(const Assessment& a);
