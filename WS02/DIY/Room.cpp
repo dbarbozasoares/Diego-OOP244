@@ -7,7 +7,7 @@ namespace seneca {
 
 		vacate(*room.m_guests);
 		delete[] room.m_roomNumber;
-		
+
 	}
 
 	void set(Room& room, int numberOfGuests, const char* roomNumber) {
@@ -15,13 +15,12 @@ namespace seneca {
 			room.m_guests = new Guest[numberOfGuests];
 			room.m_noOfGuests = numberOfGuests;
 			strcpy(room.m_roomNumber, roomNumber);
-		}
-		else {
-			
+			room.m_guests->m_firstName = nullptr;
+			room.m_guests->m_lastName = nullptr;
 		}
 	}
 	void book(Room& room) {
-		
+
 		char tmpRoom[MAX_ROOM_GUEST];
 		int tst;
 		// receive roomNumber and number of guest so after we can allocate memory with these data
@@ -44,18 +43,20 @@ namespace seneca {
 		// get information from user input
 		cout << "Room Number: ";
 		cin >> tmpRoom;
-		
 
-		if (strcmp(tmpRoom, room.m_roomNumber) == 0 && room.m_noOfGuests != 0) {
+		if (strcmp(room.m_roomNumber, tmpRoom) == 0) {
+
 			// print all guests booked on this room, if empty prints "Vacated"
 			for (int i = 0; i < room.m_noOfGuests; i++) {
 				cout << "    ";
-				if (&room.m_guests[i].m_firstName != nullptr && &room.m_guests[i].m_lastName != nullptr) {
+
+				if (room.m_guests[i].m_firstName != nullptr && room.m_guests[i].m_lastName != nullptr ) {
 					print(room.m_guests[i]);
 				}
 				else {
 					cout << "Vacated\n";
 				}
+
 			}
 		}
 	}
