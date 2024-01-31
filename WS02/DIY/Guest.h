@@ -1,5 +1,7 @@
-#define CRT_SECURE_NO_WARNINGS
+
 #include <iostream>
+#include <string.h>
+#include <cstring>
 using std::cout;
 using std::cin;
 using std::endl;

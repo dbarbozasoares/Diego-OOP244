@@ -16,7 +16,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include "Room.h"
-#include "Guest.h"
+
 using namespace std;
 using namespace seneca;
 

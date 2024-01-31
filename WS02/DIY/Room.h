@@ -1,9 +1,10 @@
 #include "Guest.h"
+#define MAX_ROOM_GUEST 6
 
 namespace seneca {
 
 	struct Room {
-		char m_roomNumber[6];
+		char m_roomNumber[MAX_ROOM_GUEST];
 		int m_noOfGuests;
 		Guest* m_guests;
 	};
