@@ -12,11 +12,16 @@
 // Name            Date            Reason
 /////////////////////////////////////////////////////////////////
 ***********************************************************************/
+// Student's name: Diego B Soares
+// ID number: 145820239
+// 02/01/2024
+// I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+// Workshop 3 part 2
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include "Room.h"
-
+#include "Guest.h"
 using namespace std;
 using namespace seneca;
 

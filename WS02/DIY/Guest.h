@@ -1,4 +1,13 @@
+// Student's name: Diego B Soares
+// ID number: 145820239
+// 02/01/2024
+// I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+// Workshop 3 part 2
 
+#ifndef GUEST_H
+#define GUEST_H
+
+#define MAX_NAME 30
 #include <iostream>
 #include <string.h>
 #include <cstring>
@@ -32,3 +41,5 @@ namespace seneca {
 	// vacates the guest by dallocating its memory.
 	void vacate(Guest& guest);
 }
+
+#endif

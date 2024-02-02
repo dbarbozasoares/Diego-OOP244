@@ -1,3 +1,11 @@
+// Student's name: Diego B Soares
+// ID number: 145820239
+// 02/01/2024
+// I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+// Workshop 3 part 2
+
+#ifndef ROOM_H
+#define ROOM_H
 #include "Guest.h"
 #define MAX_ROOM_GUEST 6
 
@@ -25,3 +33,4 @@ namespace seneca {
 	// vacates the room by dallocating all the memory used.
 	void vacate(Room& room);
 }
+#endif
