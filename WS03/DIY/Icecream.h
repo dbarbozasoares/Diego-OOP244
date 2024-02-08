@@ -2,6 +2,8 @@
 #define ICECREAM_H
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
+#include <cstring>
+#include <iomanip>
 using namespace std;
 
 // ICE CREAM VALUES IF HAS TO CHANGE
@@ -31,6 +33,8 @@ namespace seneca {
 		int getScoopUser(void);
 		int getTotalScoop(void);
 		bool getVanillaOpt(void);
+		void printOrder(void);
+		int calculateTotal(double*, double*, double*);
 	};
 
 	

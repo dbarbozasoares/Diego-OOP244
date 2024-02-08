@@ -134,12 +134,12 @@
     <None Include="..\readme.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="IceCream.cpp" />
+    <ClCompile Include="Icecream.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Vendor.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="IceCream.h" />
+    <ClInclude Include="Icecream.h" />
     <ClInclude Include="Vendor.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

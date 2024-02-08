@@ -1,4 +1,5 @@
-#include "IceCream.h"
+#include "Icecream.h"
+#include "Vendor.h"
 
 namespace seneca {
 
@@ -14,6 +15,39 @@ namespace seneca {
 		this->flavourName[3] = "Mango";
 		this->flavourName[4] = "Tutti fruit";
 		this->flavourName[5] = "Almond crunch";
+	}
+	int IceCream::calculateTotal(double* scoop, double* chocolate, double* vanilla) {
+		*scoop = this->getTotalScoop() * PRICE_BY_SCOOP;
+		*chocolate = this->getFlavour() == 1 ? PRICE_EXTRA_SCOOP_CHOCOLATE * (this->getTotalScoop()) : 0;
+		*vanilla = this->getVanillaOpt() == true ? PRICE_VANILLA_WAFFER_EXTRA : 0;
+
+		return *chocolate + *scoop + *vanilla;
+	}
+
+	void IceCream::printOrder(void) {
+		double scoop = 0, chocolate = 0, total = 0, vanilla = 0;
+		total = calculateTotal(&scoop, &chocolate, &vanilla);
+		cout << "Number of scoops, " << this->getTotalScoop() << " total:";
+		cout.width(9);
+		cout << fixed << setprecision(2) << scoop << endl;
+
+		if (this->getFlavour() == 1) {
+			cout << this->getFlavourName(this->getFlavour()) << " flavour:";
+			cout.width(17);
+			cout << chocolate << endl;
+		}
+		else {
+			cout << this->getFlavourName(this->getFlavour()) << " flavour";
+		}
+		
+		cout << "Vanilla Wafer:";
+		cout.width(21);
+		cout << vanilla << endl;
+
+		cout << "Price:";
+		cout.width(29);
+		cout << total;
+		cout << "\n\n";
 	}
 
 	const char* IceCream::getFlavourName(int n) {

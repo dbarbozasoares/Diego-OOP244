@@ -1,6 +1,6 @@
 #ifndef VENDOR_H
 #define VENDOR_H
-#include "Icecream.h"
+#include "IceCream.h"
 
 namespace seneca {
 	class Vendor {
@@ -10,10 +10,9 @@ namespace seneca {
 	public:
 		void setEmpty(void);
 		void takeOrders(void);
-		void displayOrders();
-		void clearData();
+		void displayOrders(void);
+		void clearData(void);
 		void printIceCream(void);
-		int calculateTotal(Vendor, double*, double*, double*);
 	};
 }
 

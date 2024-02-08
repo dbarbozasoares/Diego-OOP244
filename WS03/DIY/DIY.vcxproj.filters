@@ -28,7 +28,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="IceCream.cpp">
+    <ClCompile Include="Icecream.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Vendor.cpp">
@@ -39,7 +39,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="IceCream.h">
+    <ClInclude Include="Icecream.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Vendor.h">
