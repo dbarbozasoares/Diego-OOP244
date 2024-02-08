@@ -13,7 +13,7 @@ namespace seneca {
 		void displayOrders();
 		void clearData();
 		void printIceCream(void);
-		int calculateTotal(Vendor, double, double, double);
+		int calculateTotal(Vendor, double*, double*, double*);
 	};
 }
 

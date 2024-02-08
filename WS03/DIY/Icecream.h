@@ -17,12 +17,14 @@ namespace seneca {
 		bool extraVanillaWaffer; // y or n
 		int totalScoops;
 		int flavour; // select by number, not by name
+		const char* flavourName[MAX_FLAVOURS+1];
 
 	public:
 		
 		// default constructor
 		IceCream();
-		IceCream getOrder(void);
+		const char* getFlavourName(int n);
+		void getOrder(void);
 		int receiveFlavour(void);
 		int getFlavour(void);
 		bool checkWaffer(void);
