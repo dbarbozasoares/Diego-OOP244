@@ -17,6 +17,7 @@
 #ifndef SENECA_FRIDGE_H
 #define SENECA_FRIDGE_H
 
+#define FRIDGE_CAP 3
 #include <cstring>
 #include <iostream>
 
@@ -32,6 +33,22 @@ namespace seneca{
       int weight()const;
       Food();
       Food(const char* nm, int wei);
+   };
+
+   class Fridge {
+       Food m_foods[FRIDGE_CAP];
+       int m_numFoods;
+       char* m_model;
+
+   public:
+       Fridge();
+       Fridge(Food farr[], int nf, const char* mod = "Ice Age");
+       ~Fridge();
+       bool addFood(const Food& f);
+       void changeModel(const char* m);
+       bool findFood(const char* f) const;
+       bool fullFridge() const;
+       std::ostream& display(std::ostream& os = std::cout) const;
    };
 
 }
