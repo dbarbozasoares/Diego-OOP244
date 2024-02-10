@@ -1,3 +1,7 @@
+// Student's name: Diego B Soares
+// ID number: 145820239
+// 02/09/2024
+// I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
 /***********************************************************************
 // OOP244 Workshop #4 p1: tester program
 //

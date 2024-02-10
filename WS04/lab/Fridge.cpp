@@ -1,3 +1,7 @@
+// Student's name: Diego B Soares
+// ID number: 145820239
+// 02/09/2024
+// I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
 /***********************************************************************
 // OOP244 Workshop #4 p1
 //
@@ -21,25 +25,33 @@ using namespace std;
 
 namespace seneca {
 
+    // returns food name
     const char* Food::name() const {
         return m_name;
-    }
+    } 
+
+    // returns weight
     int Food::weight() const {
         return m_weight;
-    }
-    Food::Food() {}
+    } 
 
-    Food::Food(const char* nm, int wei) {
-        strncpy(m_name, nm, NAME_LEN);
-        m_weight = wei;
-    }
-
+    ////////////////////////////////////////////////////////////
     ////////////////////  CONSTRUCTORS /////////////////////////
     Fridge::Fridge() {
         this->m_numFoods = 0;
         this->m_model = nullptr;
     }
 
+    // default Food constructor
+    Food::Food() {} 
+
+    // constructor with no name, default name: Ice Age
+    Food::Food(const char* nm, int wei) {
+        strncpy(m_name, nm, NAME_LEN);
+        m_weight = wei;
+    }
+
+    // constructor with all parameters
     Fridge::Fridge(Food farr[], int nf, const char* mod)
     {
         Fridge tempFridge;
@@ -82,7 +94,9 @@ namespace seneca {
     }
 
     void Fridge::changeModel(const char* m) {
-        delete[] this->m_model;
+        if (this->m_model != nullptr) {
+            delete[] this->m_model; // deallocate previous fridge model memory if not null
+        }
         this->m_model = new char[strlen(m) + 1];
         strcpy(this->m_model, m);
     }
@@ -102,7 +116,7 @@ namespace seneca {
     bool Fridge::findFood(const char* f) const {
         bool wasFound = false;
         for (int i = 0; i < this->m_numFoods; i++) {
-            if (strcmp(this->m_foods[i].name(), f) == 0) {
+            if (strcmp(this->m_foods[i].name(), f) == 0) { // strcmp returns 0 if true
                 wasFound = true;
             }
         }
@@ -110,7 +124,7 @@ namespace seneca {
     }
 
     std::ostream& Fridge::display(std::ostream& os) const {
-        if (this->m_model != nullptr) {
+        if (this->m_model != nullptr) { // if model equals null, just return os
             os << "Fridge model: " << this->m_model << std::endl;
             os << "Food count: " << this->m_numFoods << " Capacity: " << FRIDGE_CAP << std::endl;
             os << "List of Foods" << std::endl;

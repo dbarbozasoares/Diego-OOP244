@@ -1,3 +1,7 @@
+// Student's name: Diego B Soares
+// ID number: 145820239
+// 02/09/2024
+// I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
 /***********************************************************************
 // OOP244 Workshop #4 p2
 //
@@ -29,10 +33,10 @@ namespace seneca{
       char m_name[NAME_LEN]{};
       int m_weight{};
    public:
-      const char* name()const;
-      int weight()const;
-      Food();
-      Food(const char* nm, int wei);
+      const char* name()const; // returns food name
+      int weight()const; // returns food weight
+      Food(); // default constructor
+      Food(const char* nm, int wei); // constructor with all parameters
    };
 
    class Fridge {
@@ -41,14 +45,14 @@ namespace seneca{
        char* m_model;
 
    public:
-       Fridge();
-       Fridge(Food farr[], int nf, const char* mod = "Ice Age");
+       Fridge(); // default constructor
+       Fridge(Food farr[], int nf, const char* mod = "Ice Age"); // if doesnt receive thirs parameter mod, assign to Ice Age
        ~Fridge();
-       bool addFood(const Food& f);
-       void changeModel(const char* m);
-       bool findFood(const char* f) const;
-       bool fullFridge() const;
-       std::ostream& display(std::ostream& os = std::cout) const;
+       bool addFood(const Food& f); // add food in fridge 
+       void changeModel(const char* m); // change model name
+       bool findFood(const char* f) const; // find a food by name trough fridge food array
+       bool fullFridge() const; // returns true if fridge is full
+       std::ostream& display(std::ostream& os = std::cout) const; // display all information about fridge if not null
    };
 
 }
