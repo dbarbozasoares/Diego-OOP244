@@ -49,7 +49,7 @@ namespace seneca{
        Fridge(Food farr[], int nf, const char* mod = "Ice Age"); // if doesnt receive thirs parameter mod, assign to Ice Age
        ~Fridge();
        bool addFood(const Food& f); // add food in fridge 
-       void changeModel(const char* m); // change model name
+       void changeModel(const char* m); // change model name and return true if find it
        bool findFood(const char* f) const; // find a food by name trough fridge food array
        bool fullFridge() const; // returns true if fridge is full
        std::ostream& display(std::ostream& os = std::cout) const; // display all information about fridge if not null

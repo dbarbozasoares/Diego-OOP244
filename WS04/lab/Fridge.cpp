@@ -83,6 +83,7 @@ namespace seneca {
     ///////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////
     /////////////// MODIFIERS //////////////////////////////
+    // add food if fridge not empty
     bool Fridge::addFood(const Food& f) {
         bool foodAdd = false;
         if (this->m_numFoods < FRIDGE_CAP) {
@@ -93,6 +94,7 @@ namespace seneca {
         return foodAdd;
     }
 
+    // change model name
     void Fridge::changeModel(const char* m) {
         if (this->m_model != nullptr) {
             delete[] this->m_model; // deallocate previous fridge model memory if not null
@@ -105,6 +107,7 @@ namespace seneca {
     ////////////////////////////////////////////////////////
     /////////////// QUERIES ////////////////////////////////
 
+    // returns true if fridge is full
     bool Fridge::fullFridge() const {
         bool isFull = false;
         if (this->m_numFoods == FRIDGE_CAP) {
@@ -113,6 +116,7 @@ namespace seneca {
         return isFull;
     }
 
+    // find food by name and return true if find
     bool Fridge::findFood(const char* f) const {
         bool wasFound = false;
         for (int i = 0; i < this->m_numFoods; i++) {
@@ -123,6 +127,7 @@ namespace seneca {
         return wasFound;
     }
 
+    // display all fridge information if model not null
     std::ostream& Fridge::display(std::ostream& os) const {
         if (this->m_model != nullptr) { // if model equals null, just return os
             os << "Fridge model: " << this->m_model << std::endl;
