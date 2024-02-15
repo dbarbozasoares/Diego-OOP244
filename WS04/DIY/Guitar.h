@@ -1,3 +1,7 @@
+// Student's name: Diego B Soares
+// ID number: 145820239
+// 02/15/2024
+// I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
 /***********************************************************************
 // OOP244 Workshop #4 p2: tester program
 // File  main.cpp
@@ -20,6 +24,7 @@
 #define MAT_LEN 10
 #define MAX_MODEL_NAME 15
 #include <iostream>
+#include <iomanip>
 
 namespace seneca{
 
@@ -41,13 +46,27 @@ namespace seneca{
 
   public:
       Guitar(const char* mod = "Stratocaster"); // default value if not declared
+
       Guitar(GuitarStr strs[], int ns, const char* mod);
+
       ~Guitar(); // destructor
-      bool changeString(const GuitarStr& gs, int sn);
-      void reString(GuitarStr strs[], int ns);
-      void deString();
-      bool strung() const;
-      bool matchGauge(double ga) const;
+
+      // change string by string object with material and gauge and index position
+      bool changeString(const GuitarStr& gs, int sn); 
+
+      // Restring the guitar with the provided array of GuitarStr and the number of strings
+      void reString(GuitarStr strs[], int ns); 
+
+      // removes all strings and set to safe state
+      void deString(); 
+
+      // check if guitar has at least one string
+      bool strung() const;  
+
+      // Check if any string on the guitar has a gauge matching the specified value.
+      bool matchGauge(double ga) const; 
+
+      // overload output
       std::ostream& display(std::ostream& os = std::cout) const;
 
   };
