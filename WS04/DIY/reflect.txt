@@ -1,0 +1,7 @@
+// reflection.txt
+// Student's name: Diego B Soares
+// ID number: 145820239
+// 02/15/2024
+// I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
+
+In my C++ code, I built a Guitar class showing I understand Object-Oriented Programming. I cleverly used different constructors for flexible guitar setup and properly managed dynamic memory, like in the reString function where I handle new strings. My display function nicely prints guitar details, checking if it's empty or not. Practical functions like strung, deString, changeString, reString, and matchGauge effectively modify or check the guitar's state. Notably, I enhanced my knowledge in modular programming, evident in the structured design of the class. For example, deString systematically wipes out all strings, and matchGauge intelligently checks if any string matches a given gauge. Overall, it's a practical demonstration and an enriching experience showcasing my evolving C++ skills and modular programming understanding.
