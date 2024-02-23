@@ -1,1 +1,6 @@
-ECHO is on.
+Reflection Workshop 5 part 2
+Student: Diego B Soares
+Student ID: 145820239
+
+
+In this workshop, I learned a useful technique: when needing more space, I create a temporary array with the new size, copy data from the old array to the new one, free up the memory from the old array, and then make the old array point to the new one. This way, both arrays share the same address, ensuring a smooth transition while efficiently managing memory and avoiding memory leak. I also have been enhancing my skills by making my programs more modular. I've learned to create extra functions, making my code organized and easier to understand. This approach helps me efficiently manage different parts of the program, contributing to improved clarity and maintainability in my coding. In conclusion, through this workshop, I've not only mastered memory reallocation but also honed my programming skills by embracing modularity, ensuring code efficiency and clarity.
