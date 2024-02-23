@@ -1,3 +1,7 @@
+// Student's name: Diego B Soares
+// ID number: 145820239
+// 02/22/2024
+// I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.
 #ifndef SENECA_POWER_H
 #define SENECA_POWER_H
 
