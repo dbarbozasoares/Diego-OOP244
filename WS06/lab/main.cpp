@@ -1,3 +1,16 @@
+/*/////////////////////////////////////////////////////////////////////////
+                          Workshop - 6
+Full Name  : Diego Barboza Soares
+Student ID#: 145820239
+Email      : dbarboza-soares@myseneca.ca
+Section    : NII
+Date       : 14th March 2024
+
+Authenticity Declaration:
+
+I have done all the coding by myself and only copied the code that my
+professor provided to complete my workshops and assignments.
+/////////////////////////////////////////////////////////////////////////*/
 /***********************************************************************
 // OOP244 Workshop # 6, tester program
 //
@@ -12,6 +25,7 @@
 // Name            Date            Reason
 //
 ***********************************************************************/
+
 #include <iostream>
 #include <fstream>
 #include "EmailFile.h"
@@ -31,7 +45,7 @@ int main() {
    // 3. Parametric constructor test
    EmailFile eFile2("emailFile_test1.csv");
    cout << eFile2 << endl;
-
+   
    // 4. Copy the content to a new file and load the backup:
    if (eFile2.saveToFile("backupEmails.csv"))
    {
