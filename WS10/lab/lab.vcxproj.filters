@@ -29,10 +29,10 @@
     <ClInclude Include="Book.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MatchPair.h">
+    <ClInclude Include="Student.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Student.h">
+    <ClInclude Include="MatchPair.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
